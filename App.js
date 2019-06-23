@@ -27,7 +27,9 @@ export default class App extends Component {
         </View>
         <View>
           <View />
-          <Text style={styles.footer}>johan.markus@steinholt.no 2019 &copy;</Text>
+          <Text style={styles.footer}>
+            johan.markus@steinholt.no 2019 &copy;
+          </Text>
         </View>
       </View>
     );
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "flex-start",
     backgroundColor: "#FDFDFD",
-    margin: 24
+    margin: RFPercentage(2),
   },
   topSection: {
     flex: 3,
@@ -51,9 +53,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start"
   },
   displayElement: {
-    padding: 16,
+    padding: RFPercentage(2),
     backgroundColor: "#f4f4f4",
-    borderRadius: 10,
+    borderRadius: 10
   },
   footerContainer: {
     flex: 1,
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     fontSize: RFPercentage(2),
-    color: '#666666',
-    padding: 0,
+    color: "#666666",
+    padding: 0
   }
 });

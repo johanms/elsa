@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
     color: "grey"
   },
   message: {
-    fontSize: RFPercentage(6),
+    fontSize: RFPercentage(5.5),
     color: "#444444"
   },
   postit: {
-    padding: 16,
-    backgroundColor: "#FFFF99",
+    padding: RFPercentage(2),
+    backgroundColor: "#8effd5",
     borderRadius: 10
   },
 });
