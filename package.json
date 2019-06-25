@@ -7,7 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "i18next": "^17.0.4",
     "react": "16.8.3",
+    "react-i18next": "^10.11.2",
     "react-native": "0.59.9",
     "react-native-calendar-events": "^1.7.3",
     "react-native-responsive-fontsize": "^0.2.0"

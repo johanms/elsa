@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
+import { useTranslation } from 'react-i18next';
 
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
-const timeOfDayString = date => {
-  const names = ["natt", "morgen", "formiddag", "ettermiddag", "kveld"];
+const timeOfDayKey = date => {
+  const names = ["night", "morning", "beforeDinner", "afternoon", "evening"];
   const hours = date.getHours();
   if (hours >= 18) {
     return names[4];
@@ -26,16 +27,16 @@ const timeOfDayString = date => {
 
 const TimeOfDay = props => {
   const [time, setTime] = useState(new Date());
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    const id = setInterval(() => setTime(new Date()), 1000 * 60);
+    const id = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(id);
   });
-
-  const options = { weekday: "long" };
+  
   return (
     <Text style={styles.clock}>
-      {time.toLocaleDateString("default", options).capitalize()} {timeOfDayString(time)}
+      {t("d" + time.getDay()).capitalize()} {t(timeOfDayKey(time))}
     </Text>
   );
 };

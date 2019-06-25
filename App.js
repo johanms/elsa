@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, NativeModules } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
+import i18n from "./i18n";
 
 import Clock from "./components/Clock";
 import TimeOfDay from "./components/TimeOfDay";
@@ -8,6 +9,17 @@ import Calendar from "./components/Calendar";
 import Messages from "./components/Messages";
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    const locale = NativeModules.SettingsManager.settings.AppleLocale;
+    i18n.changeLanguage(locale);
+  }
+
+  componentDidMount() {
+    const locale = NativeModules.SettingsManager.settings.AppleLocale;
+    i18n.changeLanguage(locale);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -42,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "flex-start",
     backgroundColor: "#FDFDFD",
-    margin: RFPercentage(2),
+    margin: RFPercentage(2)
   },
   topSection: {
     flex: 3,
