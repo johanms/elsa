@@ -1,0 +1,31 @@
+{
+    "currentTime": "Klokken er",
+    "remember": "Husk",
+
+    "d0": "mandag",
+    "d1": "tirsdag",
+    "d2": "onsdag",
+    "d3": "torsdag",
+    "d4": "fredag",
+    "d5": "lørdag",
+    "d6": "søndag",
+
+    "m0": "januar",
+    "m1": "februar",
+    "m2": "mars",
+    "m3": "april",
+    "m4": "mai",
+    "m5": "juni",
+    "m6": "juli",
+    "m7": "august",
+    "m8": "september",
+    "m9": "oktober",
+    "m10": "november",
+    "m11": "desember",
+
+    "night": "natt",
+    "morning": "morgen",
+    "beforeDinner": "formiddag",
+    "afternoon": "ettermiddag",
+    "evening": "kveld"
+}

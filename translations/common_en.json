@@ -1,0 +1,31 @@
+{
+  "currentTime": "Current time is",
+  "remember": "Remember",
+
+  "d0": "monday",
+  "d1": "tuesday",
+  "d2": "wednesday",
+  "d3": "thursday",
+  "d4": "friday",
+  "d5": "saturday",
+  "d6": "sunday",
+
+  "m0": "january",
+  "m1": "february",
+  "m2": "march",
+  "m3": "april",
+  "m4": "may",
+  "m5": "june",
+  "m6": "july",
+  "m7": "august",
+  "m8": "september",
+  "m9": "october",
+  "m10": "november",
+  "m11": "december",
+
+  "night": "night",
+  "morning": "morning",
+  "beforeDinner": "before dinner",
+  "afternoon": "afternoon",
+  "evening": "evening"
+}
