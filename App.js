@@ -40,7 +40,7 @@ export default class App extends Component {
         <View>
           <View />
           <Text style={styles.footer}>
-            johan.markus@steinholt.no 2019 &copy;
+            Elsa 2019 &copy;
           </Text>
         </View>
       </View>
