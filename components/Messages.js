@@ -25,7 +25,7 @@ const Messages = props => {
         e => setEvents(e),
         e => {}
       );
-    }, 1000);
+    }, 60000);
     return () => clearInterval(id);
   });
 
