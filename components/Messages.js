@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import RNCalendarEvents from "react-native-calendar-events";
 import { RFPercentage } from "react-native-responsive-fontsize";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Messages = props => {
   const [events, setEvents] = useState([]);
@@ -11,11 +11,14 @@ const Messages = props => {
 
   useEffect(() => {
     if (!authorized) {
-      RNCalendarEvents.authorizeEventStore().then(status => {
-        if (status === "authorized") {
-          setAuthorized(true);
-        }
-      });
+      RNCalendarEvents.authorizeEventStore().then(
+        status => {
+          if (status === "authorized") {
+            setAuthorized(true);
+          }
+        },
+        s => setAuthorized(false)
+      );
     }
   });
 
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
     padding: RFPercentage(2),
     backgroundColor: "#8effd5",
     borderRadius: 10
-  },
+  }
 });
 
 export default Messages;
