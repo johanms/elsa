@@ -21,7 +21,7 @@ const Calendar = props => {
 
 const styles = StyleSheet.create({
     calendar: {
-      fontSize: RFPercentage(16),
+      fontSize: RFPercentage(15),
       color: "#323232",
     }
   });

@@ -18,16 +18,18 @@ const Messages = props => {
           }
         },
         s => setAuthorized(false)
-      );
+      ).catch(() => {});
     }
   });
 
   useEffect(() => {
     const id = setInterval(() => {
-      RNCalendarEvents.fetchAllEvents(Date.now(), Date.now(), []).then(
-        e => setEvents(e),
-        e => {}
-      );
+      if (authorized) {
+        RNCalendarEvents.fetchAllEvents(Date.now(), Date.now(), []).then(
+          e => setEvents(e),
+          e => {}
+        ).catch(() => {});
+      }
     }, 60000);
     return () => clearInterval(id);
   });
