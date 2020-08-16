@@ -8,4 +8,4 @@ It also features the ability to show currently ongoing calendar events as messag
 
 ## Installation
 
-The app was previously featured on the app store, but is now open sources here. Build and install using Xcode.
+The app was previously featured on the app store, but is now open sourced here. Build and install using Xcode.
